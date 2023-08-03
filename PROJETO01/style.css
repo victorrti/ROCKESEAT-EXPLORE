@@ -21,8 +21,10 @@ span{
 span,a{
     color:#FF9900;
 }
-p{
+p,#footer{
+    font-size: 14px;
     color:#7D7987;
+    line-height: 28px;
 }
 #hero{
     width:592px;
@@ -34,4 +36,15 @@ p{
 }
 #footer a + a{
     margin-left: 28px;
+}
+#line{
+    width: 568px;
+    height: 0px;
+    border: 1px #ECEFF2 solid;
+    margin: 0 auto 8px;
+}
+#balls{
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
