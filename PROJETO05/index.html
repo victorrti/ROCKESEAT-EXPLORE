@@ -15,7 +15,30 @@
             <h1>Crie e compartilhe seu evento.</h1>
             <p>O primeiro passo, e preencher esse formulario.</p>
         </header>
-        <form action="" id="form"></form>
+        <form action="" id="form">
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>Informações do evento</legend>
+                    <div class="input-wrapper">
+                        <label for="event-title">Titulo do Evento <span>(Minimo de 8 caracteres)</span></label>
+                        <input type="text" id="event-title">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-url">Link do evento <span>(Comece com https://)</span></label>
+                        <input type="text" id="event-url">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-whatsapp">Whatsapp para contato<span>(somente numeros)</span></label>
+                        <input type="text" id="event-whatsapp">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-url">Informações extras </label>
+                        <textarea type="text" id="event-info"></textarea>
+                    </div>
+                </div>
+                
+            </fieldset>
+        </form>
     </div>
     
 </body>
