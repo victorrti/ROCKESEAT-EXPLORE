@@ -75,6 +75,8 @@ button{
     gap:10px;
     border-radius: 5px;
     cursor: pointer;   
+    color:#ffffff;
+   
 
 }
 button:hover{
