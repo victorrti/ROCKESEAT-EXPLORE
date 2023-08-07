@@ -13,7 +13,32 @@
     <div class="page"> 
         <h1>MENTORIA</h1> 
         <p>Preencha o formulario abaixo para agendar sua mentoria</p>    
-        <form action="">            
+        <form action="">  
+            <fieldset>
+                <legend>INFORMAÇÕES PESSOAIS</legend>
+                
+                <div class="fieldset-wrapper">
+                    <div class="nome">
+                        <div class="input-wrapper">
+                            <label for="mentor-nome">Nome</label>
+                            <input type="text" id="mentor-nome">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="mentor-sobrenome">Sobrenone</label>
+                            <input type="text" id="mentor-sobrenome">
+                        </div>                       
+                    </div> 
+                    <div class="input-wrapper">
+                        <label for="mentor-email">Email<span>(digite um email válido)</span></label> 
+                        <input type="text" id="mentor-email">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="mentor-password">Senha</label>           
+                        <input type="password" id="mentor-password">
+                    </div>                    
+                                        
+                </div>
+            </fieldset>          
         </form> 
     </div>    
 </body>
