@@ -42,17 +42,26 @@ form {
     background: #ffffff;
     margin-top:58px;
     padding: 64px;
+    gap:30px;
 }
 
 
 form .fieldset-wrapper .nome{
-    display:flex;
-    flex-direction: row;
-    gap:22px;
-    margin: 0;
-    padding: 0;
-   
+        display:flex;
+        flex-direction: row; 
+        gap: 8px;     
+        padding:0;
+        margin: 0;  
+      
 }
+form .fieldset-wrapper .nome div input{    
+   width: 300px;      
+  
+}
+
+
+ 
+
 fieldset{
     border:none;
 }
@@ -60,12 +69,14 @@ fieldset legend{
     width: 100%;
     border-bottom: 1px #E6E6F0 solid;
     padding-bottom: 16px;    
+    color: #535971;
+    font-size: 24px;
 }
 .fieldset-wrapper{
     display: flex;
     flex-direction: column;
     gap:30px;
-    margin-top: 68px ;
+    margin-top: 36px ;
 }
 .input-wrapper{
     display: flex;
@@ -75,7 +86,8 @@ fieldset legend{
 .input-wrapper input{
     height: 56px;
     border-radius: 8px;
-    border:1px #E6E6F0 solid;
+    border:1px #E6E6F0 solid;   
+    padding-left:10px;
     
 }
 .input-wrapper label{
@@ -84,8 +96,11 @@ fieldset legend{
     line-height: 24px;
     
 }
-.nome input{
-    width: 300px;
-
+.input-wrapper label span{
+    margin-left: 9px;    
 }
+
+
+
+
 
