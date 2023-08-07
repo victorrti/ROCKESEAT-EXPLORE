@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height:436px;
+    width:100%;
+    display: block;
+    background: #535971;
+    z-index: -1;    
+}
+body{
+    font-family: 'Poppins';
+}
+.page{
+    width: 750px;
+    min-height: 300px;    
+    margin: 0 auto;
+    padding-top: 140px;
+}
+.page h1{
+    color: #fff;  
+}
+.page p{
+    width: 417px;
+    font-size: 20px; 
+    color: #fff;          
+}
+
+form {
+    min-height: 300px;
+    background: #ffffff;
+    margin-top:58px;
+    padding: 64px;
+}
