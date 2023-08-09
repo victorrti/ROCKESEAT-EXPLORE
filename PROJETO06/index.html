@@ -13,18 +13,18 @@
     <div class="page"> 
         <h1>MENTORIA</h1> 
         <p>Preencha o formulario abaixo para agendar sua mentoria</p>    
-        <form action="">  
+        <form action="" id="my-form">  
             <fieldset>
                 <legend>INFORMAÇÕES PESSOAIS</legend>                
                 <div class="fieldset-wrapper">
                     <div class="nome">
                         <div class="input-wrapper">
                             <label for="mentor-nome">Nome</label>
-                            <input type="text" id="mentor-nome">
+                            <input type="text" id="mentor-nome" required>
                         </div>
                         <div class="input-wrapper">
                             <label for="mentor-sobrenome">Sobrenome</label>
-                            <input type="text" id="mentor-sobrenome">
+                            <input type="text" id="mentor-sobrenome" riquired>
                         </div>                       
                     </div> 
                     <div class="input-wrapper">
@@ -96,7 +96,7 @@
             </div>       
         </form> 
         <div class="button">
-            <input type="submit" value="SALVAR">
+            <input form="my-form" type="submit" value="SALVAR">
         </div>
     </div>    
 </body>
