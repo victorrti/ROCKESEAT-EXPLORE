@@ -17,9 +17,11 @@ body{
     padding: 6.0rem 2.3rem 6.6rem;
     font-size: 1.6rem;
     margin: 0 auto;
+    
 }
 main{
     max-width: 33.0rem;
+    margin: 0 auto;
 }
 h1{
     font-size: 4.0rem;
@@ -70,4 +72,30 @@ ul li span{
     letter-spacing: -2px;
     color: #090039;
 
+}
+@media(min-width:700px){
+    body{
+        padding: 8.0rem;
+    }
+    main{
+        max-width: 1020px;
+        display: flex;
+        gap:10rem;
+        
+    }
+    main > div{
+        max-width: 484px;
+    }
+    ul li{
+        gap:5.3rem;
+        max-width: 450px;
+        align-items: center;        
+    }
+
+    ul li + li{
+        margin-top: 3.3rem;
+    }
+    ul > li:first-child{
+        gap:6.4rem;
+    }
 }
