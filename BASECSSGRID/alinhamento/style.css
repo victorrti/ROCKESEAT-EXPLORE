@@ -13,11 +13,17 @@
     background-color: black;
     align-content: center;
     justify-content: space-between;
+    /* place aplica nois dois horizontal e vertival */
 
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+    
 
 }
 .grid > div{
     background-color: cornflowerblue;
+}
+.grid div:nth-child(1){
+    align-self: center;
+    justify-self: end;
 }
