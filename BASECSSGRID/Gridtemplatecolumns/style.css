@@ -1,0 +1,11 @@
+#app{
+    display:grid;
+    grid-template-columns: 1fr 200px 50% 300vw;
+}
+
+#app > div{
+    border:1px solid red;
+}
+span{
+    border: 1px solid blue;
+}

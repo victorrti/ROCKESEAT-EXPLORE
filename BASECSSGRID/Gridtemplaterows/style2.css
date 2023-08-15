@@ -1,0 +1,13 @@
+#app{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 50%;
+
+}
+
+#app > div{
+    border:1px solid red;
+}
+span{
+    border: 1px solid blue;
+}
