@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+}
+#app{
+    display:grid;
+    grid-template-areas: 
+    "A B B"
+    "A B B"
+    "A C D";
+    height: 100vh;
+    border: 2px green solid;
+}
+
+#app > *{
+    
+    border:1px solid red;
+}
+
+#app header{
+    grid-area: A;
+}
+
+#app main{
+    grid-area: B;
+}
