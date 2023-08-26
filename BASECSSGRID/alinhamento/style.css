@@ -28,11 +28,3 @@
     justify-self: end;
 }
 
-@media(min-width:1120px){
-    body{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-}
