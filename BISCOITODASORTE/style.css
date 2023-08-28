@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 96.5%;
+}
+body{
+    
+    background: rgb(25,3,97);
+    background: linear-gradient(45deg, rgba(25,3,97,1) 0%, rgba(187,0,255,1) 100%);     
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+}
+main{   
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    background: #FFF;
+    width: 42.8rem;
+    border-radius: 5px;    
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);  
+   
+}
+main .abrir{    
+    margin: 0 auto;
+    text-align: center;
+    width: 25.8rem;
+    
+       
+}
+main .abrir h2{
+    
+    color: #34355B;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700; 
+    padding: 0 6.1rem;   
+}
+main .abrir p {    
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1.4rem;
+    margin-bottom: 2.6rem;
+}
+
+#biscoito:hover{
+    animation-name: tremer;
+    animation-duration: .2s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+.hide{
+    display: none;
+}
+/*Biscoito aberto*/
+
+main .menssagem{    
+    margin: 0 auto;
+    text-align: center;
+    width: 25.8rem;
+    
+
+    
+       
+}
+main .menssagem h2{
+    
+    color: #34355B;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700; 
+    padding: 0 5.5rem;   
+}
+main .menssagem p {    
+    -webkit-animation: scale-up-bottom 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
+    animation: scale-up-bottom 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;    
+    font-family: 'Dancing Script', cursive;
+    width: 25.4rem;
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50); 
+    margin-right: 1rem;   
+    margin-top: 1.7rem;
+    margin-bottom: 2.6rem;
+    color: #000;
+    text-align: center;
+    font-weight: 400;    
+    font-size: 2.4rem;
+    padding: 1rem;
+}
+main .menssagem img {
+    
+    margin-top: 6rem;
+    
+}
+#novamente{
+    border-radius: 4px;
+    background: #FF9500;
+    border: none;
+    padding: 1.6rem;
+    color:#fff;
+    margin-top: 6.5rem;
+}
+
+@keyframes tremer {
+    50%{
+        transform: rotate(20deg);
+    }
+}
+
+
+ @-webkit-keyframes scale-up-bottom {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+  }
+  @keyframes scale-up-bottom {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+  }
+  
