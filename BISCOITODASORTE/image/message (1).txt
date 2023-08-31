@@ -1,0 +1,73 @@
+`` 	public Double getValorBaseComissaoVariadaByVendaOrPedidoVendaMaterialOrMaterial (Venda venda, Pedidovenda pedidoVenda, ComissaoVariada comissaoVariada, Pedidovendamaterial pedidoVendaMaterial, Vendamaterial vendaMaterial, Material material){
+		if(venda != null || pedidoVenda != null){
+			try{
+				Empresa empresa = venda != null ? venda.getEmpresa() : pedidoVenda.getEmpresa();
+				Material materialCusto = null;		
+				Double custo = null;
+				Double valorVenda = venda != null ? vendaMaterial.getPreco() : pedidoVendaMaterial.getPreco();
+				material =  vendaMaterial != null ? vendaMaterial.getMaterial() : pedidoVendaMaterial.getMaterial();
+		       
+		        Pedidovendamaterial pedidoVendaMaterialTabelaPreco = pedidovendamaterialService.loadMaterialTabelaPreco(pedidoVendaMaterial);
+		        if(material != null){
+		            material = materialService.loadMaterialunidademedida(material);         
+		            materialCusto = materialService.findCustoEmpresaByEmpresa(empresa,material);
+		        }
+		        if(Util.objects.isPersistent(materialCusto) && Util.collections.isListNotEmpty(materialCusto.getListaMaterialCustoEmpresa())){
+		        	for(MaterialCustoEmpresa custoEmpresa : materialCusto.getListaMaterialCustoEmpresa()){
+		    			if(Util.objects.isPersistent(custoEmpresa.getEmpresa()) && custoEmpresa.getEmpresa().equals(empresa)){
+		    				custo = custoEmpresa.getCustoMedio();
+		    				break;
+		    			}
+		    		}
+		        }
+				
+				if(custo == null){
+					if(Util.objects.isPersistent(materialCusto) && materialCusto.getValorcusto() != null){
+						custo = materialCusto.getValorcusto();
+					}
+					
+				}
+				
+				if(ComissaoVariadaTipo.VALORVENDA.equals(comissaoVariada.getTipoComissao())){
+					if(vendaMaterial != null && vendaMaterial.getPreco() != null ){
+						return vendaMaterial.getPreco();
+					}else if(pedidoVendaMaterial != null && pedidoVendaMaterial.getMaterial().equals(material)){
+						return pedidoVendaMaterial.getPreco();
+					}
+		
+				}else if(ComissaoVariadaTipo.MARGEMLUCRO.equals(comissaoVariada.getTipoComissao())){
+					if(custo == null){
+						custo = 0d;
+					}
+					Double margemLucro = venda != null ? vendaMaterial.getPreco() - custo : pedidoVendaMaterial.getPreco() -custo;
+		
+					return margemLucro;			
+					
+				}else if(ComissaoVariadaTipo.VALORTABELA.equals(comissaoVariada.getTipoComissao())){			
+					return this.valorBaseMaterialTabelaPreco(false, custo, material, venda, pedidoVenda, vendaMaterial, pedidoVendaMaterialTabelaPreco);					
+					
+					
+				}else if(ComissaoVariadaTipo.FAIXAMARKUP.equals(comissaoVariada.getTipoComissao())){
+					return this.valorBaseMaterialTabelaPreco(true, custo, material, venda, pedidoVenda, vendaMaterial, pedidoVendaMaterialTabelaPreco);
+				
+				}else if(ComissaoVariadaTipo.FAIXADEDESCONTO.equals(comissaoVariada.getTipoComissao())){
+					Double valorFaixDesconto = this.valorBaseMaterialTabelaPreco(false, custo, material, venda, pedidoVenda, vendaMaterial, pedidoVendaMaterialTabelaPreco);
+					
+					if(valorFaixDesconto != null && valorFaixDesconto > 0 ){
+						return ((valorFaixDesconto - valorVenda)/valorFaixDesconto) *100;
+					}else if(materialService.getValorvendaByCadastroMaterial(material, false) != null && materialService.getValorvendaByCadastroMaterial(material, false) > 0 ){
+						return  ((materialService.getValorvendaByCadastroMaterial(material, false)- valorVenda) / materialService.getValorvendaByCadastroMaterial(material, false)) *100 ;
+					}else{return 0D;}
+				
+				
+				}else{return 0D;}			
+				
+			}catch (Exception e) {
+				e.printStackTrace();
+			}	
+		}
+		 
+		
+		
+		return 0d;
+	} ``

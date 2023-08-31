@@ -7,7 +7,7 @@ const mensagem1 = 'Se alguém está tão cansado que não possa te dar um sorris
 const mensagem2 = 'Demonstre amor e alegria em todas as oportunidades e verá que a paz nasce dentro de si.'
 const mensagem3 = 'Defeitos e virtudes são apenas dois lados da mesma moeda.'
 const mensagens = [mensagem1,mensagem2,mensagem3,mensagem1,mensagem2,mensagem3,mensagem1,mensagem2,mensagem3,mensagem3];
-const randomNumber = Math.round(Math.random() * 10);
+let randomNumber = Math.round(Math.random() * 10);
 biscoito.addEventListener('click',abrirBiscoito);
 novamente.addEventListener('click',retornar)
 function abrirBiscoito(event){
@@ -18,4 +18,5 @@ function abrirBiscoito(event){
 function retornar(event){
     tela1.classList.toggle("hide")
     tela2.classList.toggle("hide")
+    randomNumber = Math.round(Math.random() * 10);
 }
