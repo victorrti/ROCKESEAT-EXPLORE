@@ -5,13 +5,22 @@
 }
 :root{
     font-size: 62.5%;
+    --azul-marinho-claro:#0C3440;
+    --azul-marinho-escuro:#040924;
+    --vermelho:#F03E3E;
+    --verder:#00453A;
+    --cinza:#DCE2E9;
+    --borda:rgba(73, 80, 87, 0.30);
+    --buton-azul:#02799D;
+    --color-text-placeholder:rgba(73, 80, 87, 0.50);
 }
 body{
-    background-color: #040924;
+    background-color: var(--azul-marinho-escuro);
     font-size: 1.6rem;
     display: grid;
     place-content: center;
-    height: 100vh;
+    height: 100vh;    
+    font-family: 'Roboto', sans-serif;
    
 }
 .card{
