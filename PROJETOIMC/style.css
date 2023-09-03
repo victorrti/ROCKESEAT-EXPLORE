@@ -104,4 +104,24 @@ form button{
 .modal-wrapper.open{
     opacity: 1;
     visibility:visible;
+    transform: translateY(0);
+}
+
+.alert-error{
+    position: absolute;
+    background: var(--vermelho);
+    text-align: center;
+    color: white;
+    top:0;
+    left: 0;
+    right: 0;
+    padding: 1.8rem 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: transform .5s;
+}
+.alert-error.open{
+    visibility: visible;
+    opacity: 1;
 }
