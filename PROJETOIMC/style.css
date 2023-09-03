@@ -31,3 +31,47 @@ body{
     border-radius: 0.6rem;
     box-shadow: 0px .2rem .4rem 0px rgba(0, 0, 0, 0.10);
 }
+
+.titulo{
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: var(--azul-marinho-claro);
+}
+form h1{
+    margin-bottom: 3.2rem;
+}
+form input{
+    width: 100%;
+    border: 1px solid var(--borda);
+    background: var(--cinza);
+    padding: 1.6rem;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+}
+form input:focus{
+    outline: 2px solid var(--borda);
+}
+form label{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--verder);
+    margin-bottom: .8rem;
+    display: block;
+}
+.input-wrapper + .input-wrapper{
+    margin-top: 1.6rem;
+}
+
+button{
+    margin-top: 3.2rem;
+    padding: 1.6rem;
+    border: none;
+    background: var(--buton-azul);
+    color: white;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+
+}
